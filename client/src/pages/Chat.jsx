@@ -77,12 +77,12 @@ const Chat = () => {
     };
 
     return (
-        <div className="flex flex-col h-full bg-slate-900 rounded-xl border border-slate-700 overflow-hidden">
+        <div className="flex flex-col h-full bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
             {/* Messages area */}
             <div className="flex-1 overflow-y-auto p-6 space-y-4">
                 {messages.map((msg, index) => (
                     <div key={msg._id || index} className={`flex ${msg.senderId._id === user.user.id ? 'justify-end' : 'justify-start'}`}>
-                        <div className={`max-w-[70%] rounded-2xl p-4 ${msg.senderId._id === user.user.id ? 'bg-indigo-600 text-white' : 'bg-slate-800 text-slate-100'}`}>
+                        <div className={`max-w-[70%] rounded-2xl p-4 ${msg.senderId._id === user.user.id ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-900'}`}>
                             <div className="flex items-center space-x-2 mb-1">
                                 <span className="text-xs font-bold opacity-75">{msg.senderId.name}</span>
                                 <span className="text-[10px] opacity-50">{new Date(msg.createdAt).toLocaleTimeString()}</span>
@@ -95,19 +95,19 @@ const Chat = () => {
             </div>
 
             {/* Input area */}
-            <form onSubmit={handleSendMessage} className="p-4 bg-slate-800 border-t border-slate-700">
+            <form onSubmit={handleSendMessage} className="p-4 bg-gray-50 border-t border-gray-200">
                 <div className="flex items-center space-x-3">
-                    <button type="button" className="p-2 text-slate-400 hover:text-white transition-colors">
+                    <button type="button" className="p-2 text-gray-600 hover:text-gray-900 transition-colors">
                         <Paperclip className="h-5 w-5" />
                     </button>
                     <input
                         type="text"
-                        className="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm"
+                        className="flex-1 bg-white border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm text-gray-900"
                         placeholder="Type a message..."
                         value={newMessage}
                         onChange={(e) => setNewMessage(e.target.value)}
                     />
-                    <button type="button" className="p-2 text-slate-400 hover:text-white transition-colors">
+                    <button type="button" className="p-2 text-gray-600 hover:text-gray-900 transition-colors">
                         <Smile className="h-5 w-5" />
                     </button>
                     <button type="submit" className="bg-indigo-600 p-2 rounded-lg text-white hover:bg-indigo-700 transition-colors">
@@ -120,3 +120,4 @@ const Chat = () => {
 };
 
 export default Chat;
+

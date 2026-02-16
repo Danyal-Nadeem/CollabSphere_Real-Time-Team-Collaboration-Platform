@@ -56,19 +56,19 @@ function Login() {
     }
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-slate-900 text-slate-100">
-            <div className="bg-slate-800 p-8 rounded-lg shadow-lg w-full max-w-md border border-slate-700">
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 text-gray-900">
+            <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-md border border-gray-200">
                 <div className="flex flex-col items-center mb-6">
                     <FaSignInAlt className="text-4xl text-sky-400 mb-2" />
                     <h1 className="text-3xl font-bold text-center">Login</h1>
-                    <p className="text-slate-400 mt-2">Login to start collaborating</p>
+                    <p className="text-gray-600 mt-2">Login to start collaborating</p>
                 </div>
 
                 <form onSubmit={onSubmit} className="flex flex-col space-y-4">
                     <div>
                         <input
                             type="email"
-                            className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 text-white placeholder-slate-400"
+                            className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 text-gray-900 placeholder-gray-400"
                             id="email"
                             name="email"
                             value={email}
@@ -80,7 +80,7 @@ function Login() {
                     <div>
                         <input
                             type="password"
-                            className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 text-white placeholder-slate-400"
+                            className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 text-gray-900 placeholder-gray-400"
                             id="password"
                             name="password"
                             value={password}
@@ -98,7 +98,7 @@ function Login() {
                     </button>
                 </form>
 
-                <div className="mt-6 text-center text-slate-400">
+                <div className="mt-6 text-center text-gray-600">
                     <p>
                         Don't have an account?{' '}
                         <Link to="/register" className="text-sky-400 hover:text-sky-300 font-medium">

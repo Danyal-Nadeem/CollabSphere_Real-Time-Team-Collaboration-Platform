@@ -3,11 +3,11 @@
 :root {
   --primary-color: #4f46e5;
   --secondary-color: #0ea5e9;
-  --background-dark: #0f172a;
+  --background-light: #f9fafb;
 }
 
 body {
-  @apply bg-slate-900 text-slate-100 antialiased;
+  @apply bg-gray-50 text-gray-900 antialiased;
 }
 
 /* Custom scrollbar for premium feel */
@@ -17,10 +17,10 @@ body {
   }
 
   .custom-scrollbar::-webkit-scrollbar-track {
-    @apply bg-slate-900;
+    @apply bg-gray-100;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    @apply bg-slate-800 rounded-full hover:bg-slate-700 transition-colors;
+    @apply bg-gray-300 rounded-full hover:bg-gray-400 transition-colors;
   }
 }

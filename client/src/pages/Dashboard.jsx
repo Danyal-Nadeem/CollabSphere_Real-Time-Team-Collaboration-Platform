@@ -43,16 +43,16 @@ const Dashboard = () => {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div className="lg:col-span-2 bg-slate-800 rounded-xl p-6 border border-slate-700 min-h-[300px]">
+                <div className="lg:col-span-2 bg-white rounded-xl p-6 border border-gray-200 min-h-[300px] shadow-sm">
                     <h3 className="text-xl font-semibold mb-4">Recent Activity</h3>
-                    <div className="flex flex-col items-center justify-center h-48 text-slate-500 italic">
+                    <div className="flex flex-col items-center justify-center h-48 text-gray-500 italic">
                         No recent activity yet. Start collaborating!
                     </div>
                 </div>
-                <div className="bg-slate-800 rounded-xl p-6 border border-slate-700 h-fit">
+                <div className="bg-white rounded-xl p-6 border border-gray-200 h-fit shadow-sm">
                     <h3 className="text-xl font-semibold mb-4">Upcoming Deadlines</h3>
                     <div className="space-y-4">
-                        <p className="text-sm text-slate-500 italic">No tasks with deadlines.</p>
+                        <p className="text-sm text-gray-500 italic">No tasks with deadlines.</p>
                     </div>
                 </div>
             </div>
@@ -61,16 +61,16 @@ const Dashboard = () => {
 };
 
 const StatCard = ({ icon, title, value, label }) => (
-    <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-indigo-500/50 transition-all">
+    <div className="bg-white p-6 rounded-xl border border-gray-200 hover:border-indigo-300 transition-all shadow-sm hover:shadow-md">
         <div className="flex items-center justify-between mb-4">
-            <div className="p-3 bg-slate-900 rounded-lg">
+            <div className="p-3 bg-gray-50 rounded-lg">
                 {icon}
             </div>
         </div>
-        <h4 className="text-slate-400 text-sm font-medium uppercase tracking-wider">{title}</h4>
+        <h4 className="text-gray-600 text-sm font-medium uppercase tracking-wider">{title}</h4>
         <div className="flex items-baseline space-x-2 mt-1">
             <span className="text-2xl font-bold">{value}</span>
-            <span className="text-xs text-slate-500">{label}</span>
+            <span className="text-xs text-gray-500">{label}</span>
         </div>
     </div>
 );
