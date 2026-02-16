@@ -61,10 +61,10 @@ export const authSlice = createSlice({
             .addCase(register.pending, (state) => {
                 state.isLoading = true;
             })
-            .addCase(register.fulfilled, (state) => {
+            .addCase(register.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.isSuccess = true;
-                state.user = state.payload;
+                state.user = action.payload;
             })
             .addCase(register.rejected, (state, action) => {
                 state.isLoading = false;

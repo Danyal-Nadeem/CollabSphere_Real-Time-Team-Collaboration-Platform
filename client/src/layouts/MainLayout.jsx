@@ -121,7 +121,15 @@ const MainLayout = () => {
                         </div>
                         <div className="truncate flex-1">
                             <p className="text-sm font-semibold text-gray-900">{user?.user?.name}</p>
-                            <p className="text-[10px] text-gray-500 truncate">{user?.user?.email}</p>
+                            <div className="flex items-center gap-2">
+                                <p className="text-[10px] text-gray-500 truncate">{user?.user?.email}</p>
+                                <span className={`text-[9px] px-1.5 py-0.5 rounded font-semibold ${user?.user?.role === 'Admin' ? 'bg-rose-100 text-rose-700' :
+                                        user?.user?.role === 'Manager' ? 'bg-indigo-100 text-indigo-700' :
+                                            'bg-gray-200 text-gray-700'
+                                    }`}>
+                                    {user?.user?.role || 'Member'}
+                                </span>
+                            </div>
                         </div>
                     </div>
                     <button
